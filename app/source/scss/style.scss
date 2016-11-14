@@ -4,19 +4,20 @@
 @import 'base';
 @import 'clearfix';
 @import 'kdmicon'; // アイコンフォント
+@import 'icon-label';
+@import 'sub-headline';
+@import 'headline';
 
 /* 以下にスタイルを記述
 ************************* */
 
 .anaheim { // 英数フォント
   font-family: 'Anaheim', sans-serif;
+  letter-spacing: .05em;
 }
 
 body {
-  // padding: 0 5%; // 両端のpaddingを計算
-  .section,
-  .header,
-  .footer {
+  .section {
     padding: 40px 5%;
     @include media(pc) {
       padding: 0 calc( (100% - 1024px)/2 ); // 両端のpaddingを計算
@@ -32,19 +33,6 @@ body {
 }
 
 .main {
-  .headline {
-    margin: 0 0 12px;
-    .headline-en {
-      @extend .anaheim;
-      font-size: 24px;
-      letter-spacing: .075em;
-    }
-    .headline-jp {
-      color: $blue;
-      font-size: 12px;
-      letter-spacing: .1em;
-    }
-  }
   #aboutweb {
     background-color: $bg-gray;
   }
@@ -53,12 +41,13 @@ body {
       padding: 10px 0;
       border-top: 1px solid $lightgray;
       &:nth-child(1) {
-        border-color: red;
+        border-top-width: 0;
       }
       .article-category {
         font-size: 12px;
         .icon {
-          font-size: 20px;
+          font-size: 14px;
+          margin-right: 5px;
         }
       }
       .article-title {
@@ -75,6 +64,7 @@ body {
           font-size: 11px;
         }
         .article-source-url {
+          @extend .anaheim;
           display: block;
           font-size: 10px;
         }
@@ -83,6 +73,16 @@ body {
   }
   #aboutme {
     background-color: $bg-gray;
+    .socials {
+      margin-top: 20px;
+      li {
+        @extend .anaheim;
+        .icon {
+          font-size: 18px;
+          margin-right: 10px;
+        }
+      }
+    }
   }
 }
 

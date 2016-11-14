@@ -1,0 +1,15 @@
+.icon-label {
+  margin-top: 10px;
+  .icon,
+  .label {
+    vertical-align: middle;
+  }
+  .icon {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  .label {
+    @extend .anaheim;
+    font-size: 16px;
+  }
+}

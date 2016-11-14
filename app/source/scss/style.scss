@@ -13,7 +13,15 @@
 }
 
 body {
-  padding: 0 calc( (100% - 1024px)/2 ); // 両端のpaddingを計算
+  // padding: 0 5%; // 両端のpaddingを計算
+  .section,
+  .header,
+  .footer {
+    padding: 40px 5%;
+    @include media(pc) {
+      padding: 0 calc( (100% - 1024px)/2 ); // 両端のpaddingを計算
+    }
+  }
 }
 
 .header {
@@ -25,7 +33,7 @@ body {
 
 .main {
   .headline {
-    margin: 48px 0 12px;
+    margin: 0 0 12px;
     .headline-en {
       @extend .anaheim;
       font-size: 24px;
@@ -36,6 +44,45 @@ body {
       font-size: 12px;
       letter-spacing: .1em;
     }
+  }
+  #aboutweb {
+    background-color: $bg-gray;
+  }
+  #articles {
+    .article {
+      padding: 10px 0;
+      border-top: 1px solid $lightgray;
+      &:nth-child(1) {
+        border-color: red;
+      }
+      .article-category {
+        font-size: 12px;
+        .icon {
+          font-size: 20px;
+        }
+      }
+      .article-title {
+        font-weight: bold;
+      }
+      .article-source {
+        text-align: right;
+        color: $gray;
+        line-height: 0.9em;
+        display: block;
+        margin-top: 10px;
+        .article-source-title {
+          display: block;
+          font-size: 11px;
+        }
+        .article-source-url {
+          display: block;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  #aboutme {
+    background-color: $bg-gray;
   }
 }
 

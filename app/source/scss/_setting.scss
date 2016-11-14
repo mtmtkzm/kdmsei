@@ -1,15 +1,19 @@
-//antialiased,subpixel-antialiased,none
+// Colors
+$blue: #5D71D2;
+$gray: #757575;
+$white: #ffffff;
+$black: #252525;
+
+$triangle-base-blue: #2139B3;
+
+$bg-gray: #EEEEEE;
+$bg-white: #FAFAFA;
+
 $font-smoothing: antialiased;
-//auto,optimizeSpeed,optimizeLegibility,geometricPrecision
 $text-rendering: auto;
 $base-font-size: 16px;
-$base-font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-$base-font-color: #333;
-$base-background-color: #fff;
+$base-font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
+$base-font-color: $black;
+$base-line-height: 1.6em;
+$base-background-color: $bg-white;
 
-
-// Colors
-$tare: #FAAD8F;
-$blue: #21B8C5;
-$red: #E62E8B;
-$yellow: #FFDE00;

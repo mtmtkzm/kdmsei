@@ -4,5 +4,26 @@
 @import 'base';
 @import 'clearfix';
 
+@import 'kdmicon';
+
 /* 以下にスタイルを記述
 ************************* */
+
+
+.anaheim { // 英数フォント
+  font-family: 'Anaheim', sans-serif;
+}
+
+header {
+
+}
+
+main {
+
+}
+
+footer {
+  .copyright {
+    text-align: center;
+  }
+}

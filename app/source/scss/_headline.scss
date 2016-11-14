@@ -10,4 +10,12 @@
     font-size: 12px;
     letter-spacing: .1em;
   }
+  @include media(pc) {
+    .headline-en {
+      font-size: 30px;
+    }
+    .headline-jp {
+      font-size: 14px;
+    }
+  }
 }

@@ -17,15 +17,23 @@
 }
 
 body {
+  $side-padding: calc( (100% - 1024px)/2 );
+  .header,
   .section {
     padding: 40px 5%;
     @include media(pc) {
-      padding: 0 calc( (100% - 1024px)/2 ); // 両端のpaddingを計算
+      padding: 55px $side-padding; // 両端のpaddingを計算
     }
+  }
+  .header {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
 .header {
+  height: 60px;
+  line-height: 60px;
   .sitelogo {
     font-size: 32px;
     font-weight: bold;
@@ -33,12 +41,24 @@ body {
 }
 
 .main {
+  @include media(pc) { // layout
+    .section {
+      display: flex;
+      .l-headline {
+        width: 324px;
+      }
+      .l-section-contents {
+        width: 700px;
+      }
+    }
+  }
   #aboutweb {
     background-color: $bg-gray;
   }
   #articles {
     .article {
-      padding: 10px 0;
+      padding: 0 0 10px;
+      margin-bottom: 10px;
       border-top: 1px solid $lightgray;
       &:nth-child(1) {
         border-top-width: 0;
@@ -54,19 +74,29 @@ body {
         font-weight: bold;
       }
       .article-source {
-        text-align: right;
+        float: right;
         color: $gray;
         line-height: 0.9em;
-        display: block;
         margin-top: 10px;
         .article-source-title {
-          display: block;
           font-size: 11px;
+          display: block;
+          text-align: right;
         }
         .article-source-url {
           @extend .anaheim;
-          display: block;
           font-size: 10px;
+          margin-top: 3px;
+          display: block;
+          text-align: right;
+        }
+        @include media(pc) {
+          .article-source-title {
+            font-size: 12px;
+          }
+          .article-source-url {
+            font-size: 11px;
+          }
         }
       }
     }
@@ -79,6 +109,7 @@ body {
         @extend .anaheim;
         .icon {
           font-size: 18px;
+          color: $gray;
           margin-right: 10px;
         }
       }
@@ -89,5 +120,6 @@ body {
 .footer {
   .copyright {
     text-align: center;
+    line-height: 50px;
   }
 }

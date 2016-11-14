@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'kdmicon';
-  src:  url('../fonts/kdmicon.eot?lwb091');
-  src:  url('../fonts/kdmicon.eot?lwb091#iefix') format('embedded-opentype'),
-    url('../fonts/kdmicon.ttf?lwb091') format('truetype'),
-    url('../fonts/kdmicon.woff?lwb091') format('woff');
+  src:  url('../fonts/kdmicon.eot?9tpoi3');
+  src:  url('../fonts/kdmicon.eot?9tpoi3#iefix') format('embedded-opentype'),
+    url('../fonts/kdmicon.ttf?9tpoi3') format('truetype'),
+    url('../fonts/kdmicon.woff?9tpoi3') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -11,32 +11,32 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'kdmicon' !important;
-  vertical-align: baseline;
   speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  vertical-align: text-top;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-category:before {
+.icon-triangle:before {
   content: "\e900";
 }
-.icon-hatena:before {
+.icon-category:before {
   content: "\e901";
 }
-.icon-instagram:before {
+.icon-hatena:before {
   content: "\e902";
 }
-.icon-mail:before {
+.icon-instagram:before {
   content: "\e903";
 }
-.icon-triangle:before {
+.icon-mail:before {
   content: "\e904";
 }
 .icon-twitter:before {

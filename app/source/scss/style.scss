@@ -3,26 +3,43 @@
 @import 'mixin';
 @import 'base';
 @import 'clearfix';
-
-@import 'kdmicon';
+@import 'kdmicon'; // アイコンフォント
 
 /* 以下にスタイルを記述
 ************************* */
-
 
 .anaheim { // 英数フォント
   font-family: 'Anaheim', sans-serif;
 }
 
-header {
-
+body {
+  padding: 0 calc( (100% - 1024px)/2 ); // 両端のpaddingを計算
 }
 
-main {
-
+.header {
+  .sitelogo {
+    font-size: 32px;
+    font-weight: bold;
+  }
 }
 
-footer {
+.main {
+  .headline {
+    margin: 48px 0 12px;
+    .headline-en {
+      @extend .anaheim;
+      font-size: 24px;
+      letter-spacing: .075em;
+    }
+    .headline-jp {
+      color: $blue;
+      font-size: 12px;
+      letter-spacing: .1em;
+    }
+  }
+}
+
+.footer {
   .copyright {
     text-align: center;
   }

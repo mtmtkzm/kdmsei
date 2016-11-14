@@ -105,13 +105,10 @@ body {
     background-color: $bg-gray;
     .socials {
       margin-top: 20px;
-      li {
-        @extend .anaheim;
-        .icon {
-          font-size: 18px;
-          color: $gray;
-          margin-right: 10px;
-        }
+      @extend .anaheim;
+      .icon {
+        font-size: 18px;
+        color: $gray;
       }
     }
   }

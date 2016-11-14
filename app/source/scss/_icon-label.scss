@@ -2,14 +2,22 @@
   margin-top: 10px;
   .icon,
   .label {
+    transition: color .3s ease-in-out;
     vertical-align: middle;
   }
   .icon {
-    margin-right: 10px;
     font-size: 18px;
+    padding-right: 7px;
   }
   .label {
     @extend .anaheim;
     font-size: 16px;
+  }
+
+  &:hover {
+    .icon,
+    .label {
+      color: $blue !important;
+    }
   }
 }

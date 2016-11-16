@@ -1,10 +1,12 @@
-// Triangle Animation
+
+/* Triangle Animation
+***** */
+// 描画範囲
 var canvas = document.getElementById('js-triangles');
 
-// DOM生成
+// 三角形DOMを生成
 function createTriangle() {
   var amount = window.innerWidth * window.innerHeight / 150000; // 面積によって
-
   for (var i=0; i<amount; i++) {
     var triangle = document.createElement('span');
     triangle.classList.add('js-triangle', 'icon', 'icon-triangle');
@@ -14,7 +16,4 @@ function createTriangle() {
     canvas.appendChild(triangle);
   }
 }
-
-// 生成
 createTriangle();
-

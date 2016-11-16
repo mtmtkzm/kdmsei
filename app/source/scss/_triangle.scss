@@ -1,0 +1,16 @@
+#js-triangles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  .js-triangle {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .icon {
+    font-size: 28px;
+  }
+}

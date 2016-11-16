@@ -7,6 +7,7 @@
 @import 'icon-label';
 @import 'sub-headline';
 @import 'headline';
+@import 'triangle';
 
 /* 以下にスタイルを記述
 ************************* */
@@ -23,6 +24,10 @@ body {
     padding: 40px 5%;
     @include media(pc) {
       padding: 55px $side-padding; // 両端のpaddingを計算
+    }
+    > * {
+      position: relative;
+      z-index: 10;
     }
   }
   .header {
@@ -72,6 +77,9 @@ body {
       }
       .article-title {
         font-weight: bold;
+        &:hover {
+          text-decoration: underline;
+        }
       }
       .article-source {
         float: right;
@@ -91,6 +99,10 @@ body {
           text-align: right;
         }
         @include media(pc) {
+          transition: opacity .2s ease-in-out;
+          &:hover {
+            opacity: .75;
+          }
           .article-source-title {
             font-size: 12px;
           }
@@ -120,3 +132,4 @@ body {
     line-height: 50px;
   }
 }
+

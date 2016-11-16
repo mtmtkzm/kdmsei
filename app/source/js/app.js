@@ -8,7 +8,7 @@ var canvas = document.getElementById('js-triangles');
 // 三角形DOMを生成
 function createTriangle() {
   var amount = window.innerWidth * window.innerHeight / 80000; // 面積によって
-  var triangleColors = ['#7B84B3', '#5D71D2', '#4558B3', '#152573'];
+  var triangleColors = ['#2139B3', '#7B84B3', '#5D71D2', '#4558B3', '#152573'];
   if(amount > 9) {
     amount = 9;
   }

@@ -5,7 +5,7 @@
 var canvas = document.getElementById('js-triangles');
 var canvasWidth = window.innerWidth;
 var canvasHeight = window.innerHeight;
-console.log(canvasWidth, canvasHeight);
+
 // 三角形オブジェクトを管理する配列
 var triangles = [];
 
@@ -27,11 +27,14 @@ function createTriangle() {
   }
 }
 
-function moveTriangle() {
-  var target = triangles[0];
+function moveTriangle(i) {
+  var target = triangles[i];
   var parsedTop = parseFloat(target.style.top, 10);
   var parsedLeft = parseFloat(target.style.left, 10);
-  var speed = { x: 5, y: 3 };
+  var speed = {
+    x: Math.floor( Math.random()*4 - 2 ),
+    y: Math.floor( Math.random()*3 - 1 )
+  };
   setInterval(function() {
     parsedTop += speed.x;
     parsedLeft += speed.y;
@@ -47,4 +50,8 @@ function moveTriangle() {
 // 三角形のDOMを生成する
 createTriangle();
 // 三角形がゆらゆら移動するアニメーション
-moveTriangle();
+
+
+for (var i=0; i<triangles.length; i++) {
+  moveTriangle(i);
+}

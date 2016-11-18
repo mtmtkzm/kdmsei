@@ -38,10 +38,10 @@ function moveTriangle(i) {
     target.style.top = parsedTop + '%';
     target.style.left = parsedLeft + '%';
 
-    if (parsedTop > 100 || parsedTop < -10) speed.x = -speed.x;
-    if (parsedLeft > 100 || parsedLeft < -10) speed.y = -speed.y;
+    if (parsedTop > 120 || parsedTop < -20) speed.x = -speed.x;
+    if (parsedLeft > 120 || parsedLeft < -20) speed.y = -speed.y;
 
-  }, 1000);
+  }, 100);
 }
 
 // 三角形のDOMを生成する

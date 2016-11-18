@@ -7,15 +7,15 @@
   height: 100vh;
   .js-triangle {
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
-    opacity: .75;
+    opacity: 0;
     animation: rotateTriangle;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    transition-property: top, left;
+    transition-property: bottom, left;
     transition-duration: 250ms;
-    transition-timing-function: linear; 
+    transition-timing-function: linear;
   }
   .icon {
     font-size: 28px;

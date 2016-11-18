@@ -16,29 +16,31 @@ function createTriangle() {
     var triangle = document.createElement('span');
     triangle.classList.add('js-triangle', 'icon', 'icon-triangle');
     triangle.style.color = triangleColors[ Math.floor( Math.random()*triangleColors.length ) ];
-    triangle.style.top = Math.random()*100 + '%';
+    triangle.style.bottom = Math.random()*100 + '%';
     triangle.style.left = Math.random()*100 + '%';
     triangle.style.animationDuration = Math.random()*8000 + 12000 + 'ms';
-    canvas.appendChild(triangle); // ブラウザ上に描画
     triangles.push(triangle); // 配列で三角形objを管理
+
+    canvas.appendChild(triangle); // ブラウザ上に描画
+    triangle.style.opacity = '.75';
   }
 }
 
 function moveTriangle(i) {
   var target = triangles[i];
-  var parsedTop = parseFloat(target.style.top, 10);
+  var parsedBottom = parseFloat(target.style.bottom, 10);
   var parsedLeft = parseFloat(target.style.left, 10);
   var speed = {
     x: Math.floor( Math.random()*2 - 1 ),
     y: Math.floor( Math.random()*2 - 1 )
   };
   setInterval(function() {
-    parsedTop += speed.x;
+    parsedBottom += speed.x;
     parsedLeft += speed.y;
-    target.style.top = parsedTop + '%';
+    target.style.bottom = parsedBottom + '%';
     target.style.left = parsedLeft + '%';
 
-    if (parsedTop > 100 || parsedTop < 0) speed.x = -speed.x;
+    if (parsedBottom > 100 || parsedBottom < 0) speed.x = -speed.x;
     if (parsedLeft > 100 || parsedLeft < 0) speed.y = -speed.y;
 
   }, 250);
@@ -47,8 +49,4 @@ function moveTriangle(i) {
 // 三角形のDOMを生成する
 createTriangle();
 // 三角形がゆらゆら移動するアニメーション
-
-
-for (var i=0; i<triangles.length; i++) {
-  moveTriangle(i);
-}
+for (var i=0; i<triangles.length; i++) { moveTriangle(i); }

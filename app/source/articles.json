@@ -1,0 +1,26 @@
+var articles = [
+  {
+    "category": "ペット",
+    "title": "飼い猫に首輪は必要？かわいい飼い猫を守る首輪の意味と役割かわいい飼い猫を守る首",
+    "url": "http://min-petlife.com",
+    "url-title": "みんなのペットライフ",
+  },
+  {
+    "category": "ペット",
+    "title": "飼い猫に首輪は必要？かわいい飼い猫を守る首輪の意味と役割かわいい飼い猫を守る首",
+    "url": "http://min-petlife.com",
+    "url-title": "みんなのペットライフ",
+  },
+  {
+    "category": "ペット",
+    "title": "飼い猫に首輪は必要？かわいい飼い猫を守る首輪の意味と役割かわいい飼い猫を守る首",
+    "url": "http://min-petlife.com",
+    "url-title": "みんなのペットライフ",
+  },
+  {
+    "category": "ペット",
+    "title": "飼い猫に首輪は必要？かわいい飼い猫を守る首輪の意味と役割かわいい飼い猫を守る首",
+    "url": "http://min-petlife.com",
+    "url-title": "みんなのペットライフ",
+  }
+];

@@ -18,7 +18,10 @@ function createTriangle() {
     triangle.style.color = triangleColors[ Math.floor( Math.random()*triangleColors.length ) ];
     triangle.style.top = Math.random()*100 + 'vh';
     triangle.style.left = Math.random()*100 + 'vw';
+    triangle.style.animationDuration = Math.random()*10000 + 8000 + 'ms';
     canvas.appendChild(triangle);
   }
 }
 createTriangle();
+
+

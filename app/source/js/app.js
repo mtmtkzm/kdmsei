@@ -3,9 +3,6 @@
 
 // 描画範囲
 var canvas = document.getElementById('js-triangles');
-var canvasWidth = window.innerWidth;
-var canvasHeight = window.innerHeight;
-
 // 三角形オブジェクトを管理する配列
 var triangles = [];
 

@@ -32,17 +32,16 @@ function moveTriangle() {
   var parsedTop = parseFloat(target.style.top, 10);
   var parsedLeft = parseFloat(target.style.left, 10);
   var speed = { x: 5, y: 3 };
-
   setInterval(function() {
     parsedTop += speed.x;
     parsedLeft += speed.y;
     target.style.top = parsedTop + '%';
     target.style.left = parsedLeft + '%';
 
-    if (parsedTop > 100 || parsedTop < 0) speed.x = -speed.x;
-    if (parsedLeft > 100 || parsedLeft < 0) speed.y = -speed.y;
+    if (parsedTop > 100 || parsedTop < -10) speed.x = -speed.x;
+    if (parsedLeft > 100 || parsedLeft < -10) speed.y = -speed.y;
 
-  }, 1000);  
+  }, 1000);
 }
 
 // 三角形のDOMを生成する

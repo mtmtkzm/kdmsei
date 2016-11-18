@@ -31,8 +31,8 @@ function moveTriangle(i) {
   var parsedBottom = parseFloat(target.style.bottom, 10);
   var parsedLeft = parseFloat(target.style.left, 10);
   var speed = {
-    x: Math.floor( Math.random()*2 - 1 ),
-    y: Math.floor( Math.random()*2 - 1 )
+    x: Math.random()*2 - 1,
+    y: Math.random()*2 - 1
   };
   setInterval(function() {
     parsedBottom += speed.x;

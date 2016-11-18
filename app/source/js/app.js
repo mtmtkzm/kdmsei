@@ -7,7 +7,7 @@ var canvas = document.getElementById('js-triangles');
 var triangles = [];
 
 function createTriangle() {
-  var amount = window.innerWidth * window.innerHeight / 80000; // 面積によって
+  var amount = window.innerWidth * window.innerHeight / 55000; // 面積によって
   var triangleColors = ['#2139B3', '#7B84B3', '#5D71D2', '#4558B3', '#152573'];
   if(amount > 9) {
     amount = 9;
@@ -29,8 +29,8 @@ function moveTriangle(i) {
   var parsedTop = parseFloat(target.style.top, 10);
   var parsedLeft = parseFloat(target.style.left, 10);
   var speed = {
-    x: Math.floor( Math.random()*4 - 2 ),
-    y: Math.floor( Math.random()*3 - 1 )
+    x: Math.floor( Math.random()*2 - 1 ),
+    y: Math.floor( Math.random()*2 - 1 )
   };
   setInterval(function() {
     parsedTop += speed.x;
@@ -38,10 +38,10 @@ function moveTriangle(i) {
     target.style.top = parsedTop + '%';
     target.style.left = parsedLeft + '%';
 
-    if (parsedTop > 120 || parsedTop < -20) speed.x = -speed.x;
-    if (parsedLeft > 120 || parsedLeft < -20) speed.y = -speed.y;
+    if (parsedTop > 100 || parsedTop < 0) speed.x = -speed.x;
+    if (parsedLeft > 100 || parsedLeft < 0) speed.y = -speed.y;
 
-  }, 100);
+  }, 250);
 }
 
 // 三角形のDOMを生成する

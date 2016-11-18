@@ -12,6 +12,9 @@
     animation: rotateTriangle;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    transition-property: top, left;
+    transition-duration: 1000ms;
+    transition-timing-function: linear; 
   }
   .icon {
     font-size: 28px;
@@ -19,10 +22,6 @@
 }
 
 @keyframes rotateTriangle {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }

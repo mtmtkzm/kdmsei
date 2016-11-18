@@ -1,11 +1,14 @@
-
 /* Triangle Animation
 ***** */
 
 // 描画範囲
 var canvas = document.getElementById('js-triangles');
+var canvasWidth = window.innerWidth;
+var canvasHeight = window.innerHeight;
+console.log(canvasWidth, canvasHeight);
+// 三角形オブジェクトを管理する配列
+var triangles = [];
 
-// 三角形DOMを生成
 function createTriangle() {
   var amount = window.innerWidth * window.innerHeight / 80000; // 面積によって
   var triangleColors = ['#2139B3', '#7B84B3', '#5D71D2', '#4558B3', '#152573'];
@@ -16,12 +19,33 @@ function createTriangle() {
     var triangle = document.createElement('span');
     triangle.classList.add('js-triangle', 'icon', 'icon-triangle');
     triangle.style.color = triangleColors[ Math.floor( Math.random()*triangleColors.length ) ];
-    triangle.style.top = Math.random()*100 + 'vh';
-    triangle.style.left = Math.random()*100 + 'vw';
-    triangle.style.animationDuration = Math.random()*10000 + 8000 + 'ms';
-    canvas.appendChild(triangle);
+    triangle.style.top = Math.random()*100 + '%';
+    triangle.style.left = Math.random()*100 + '%';
+    triangle.style.animationDuration = Math.random()*8000 + 12000 + 'ms';
+    canvas.appendChild(triangle); // ブラウザ上に描画
+    triangles.push(triangle); // 配列で三角形objを管理
   }
 }
+
+function moveTriangle() {
+  var target = triangles[0];
+  var parsedTop = parseFloat(target.style.top, 10);
+  var parsedLeft = parseFloat(target.style.left, 10);
+  var speed = { x: 5, y: 3 };
+
+  setInterval(function() {
+    parsedTop += speed.x;
+    parsedLeft += speed.y;
+    target.style.top = parsedTop + '%';
+    target.style.left = parsedLeft + '%';
+
+    if (parsedTop > 100 || parsedTop < 0) speed.x = -speed.x;
+    if (parsedLeft > 100 || parsedLeft < 0) speed.y = -speed.y;
+
+  }, 1000);  
+}
+
+// 三角形のDOMを生成する
 createTriangle();
-
-
+// 三角形がゆらゆら移動するアニメーション
+moveTriangle();

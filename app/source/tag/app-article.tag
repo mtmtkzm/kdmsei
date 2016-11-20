@@ -11,18 +11,17 @@
       <span class="article-source-url">{sourceUrl}</span>
     </a>
   </article>
+
+
+  <script>
+    this.items = articles;
+
+    var i = 0;
+    this.category = this.items[i].category;
+    this.postTitle = this.items[i].post.title;
+    this.postUrl = this.items[i].post.url;
+    this.sourceTitle = this.items[i].source.title;
+    this.sourceUrl = this.items[i].source.url;
+    console.log(this.category, this.postTitle, this.postUrl, this.sourceTitle, this.sourceUrl);
+  </script>
 </app-articles>
-
-<script>
-  this.items = articles;
-  console.log(this.items);
-
-  var i = 0;
-  this.category = articles[i].category;
-  this.postTitle = articles[i].post.title;
-  this.postUrl = articles[i].post.url;
-  this.sourceTitle = articles[i].source.title;
-  this.sourceUrl = articles[i].source.url;
-  console.log(this.category, this.postTitle, this.postUrl, this.sourceTitle, this.sourceUrl);
-
-</script>

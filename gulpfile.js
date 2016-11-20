@@ -79,6 +79,9 @@ var copyPaths = [
 	}, {
 		from: './app/source/articles.js',
 		to: './app/public'
+	}, {
+		from: './app/source/tag/**/*',
+		to: './app/public/tag'
 	}
 ];
 

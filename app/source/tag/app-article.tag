@@ -1,5 +1,5 @@
 <app-articles id="js-articles" class="l-section-contents">
-  <article class="article clearfix">
+  <article each={ items } class="article clearfix">
     <span class="article-category">
       <span class="icon icon-category"></span>{category}
     </span>

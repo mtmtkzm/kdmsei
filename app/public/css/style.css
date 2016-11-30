@@ -1,0 +1,389 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: auto;
+  font-size: 16px;
+  line-height: 1.75em;
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
+  color: #252525;
+  background-color: #FAFAFA;
+}
+
+a {
+  color: #252525;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #252525;
+  text-decoration: none;
+}
+
+.clearfix {
+  display: inline-table;
+  min-height: 1%;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Hides from IE-mac */
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+/* End hide from IE-mac */
+@font-face {
+  font-family: 'kdmicon';
+  src: url("../fonts/kdmicon.eot?9tpoi3");
+  src: url("../fonts/kdmicon.eot?9tpoi3#iefix") format("embedded-opentype"), url("../fonts/kdmicon.ttf?9tpoi3") format("truetype"), url("../fonts/kdmicon.woff?9tpoi3") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'kdmicon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: text-top;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-triangle:before {
+  content: "\e900";
+}
+
+.icon-category:before {
+  content: "\e901";
+}
+
+.icon-hatena:before {
+  content: "\e902";
+}
+
+.icon-instagram:before {
+  content: "\e903";
+}
+
+.icon-mail:before {
+  content: "\e904";
+}
+
+.icon-twitter:before {
+  content: "\e905";
+}
+
+.icon-label {
+  margin-top: 10px;
+}
+
+.icon-label .icon,
+.icon-label .label {
+  -webkit-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+  vertical-align: middle;
+}
+
+.icon-label .icon {
+  font-size: 18px;
+  padding-right: 7px;
+}
+
+.icon-label .label {
+  font-size: 16px;
+}
+
+.icon-label:hover .icon,
+.icon-label:hover .label {
+  color: #5D71D2 !important;
+}
+
+.sub-headline {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: .1em;
+  margin-top: 20px;
+}
+
+.headline {
+  margin: 0 0 12px;
+}
+
+.headline .headline-en {
+  font-size: 24px;
+  letter-spacing: .075em;
+}
+
+.headline .headline-jp {
+  color: #5D71D2;
+  font-size: 12px;
+  letter-spacing: .1em;
+}
+
+@media only screen and (min-width: 1025px) {
+  .headline .headline-en {
+    font-size: 30px;
+  }
+  .headline .headline-jp {
+    font-size: 14px;
+  }
+}
+
+#js-triangles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#js-triangles .js-triangle {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-animation: rotateTriangle;
+  animation: rotateTriangle;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-transition-property: bottom, left;
+  transition-property: bottom, left;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+#js-triangles .icon {
+  font-size: 28px;
+}
+
+@-webkit-keyframes rotateTriangle {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateTriangle {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* 以下にスタイルを記述
+************************* */
+.anaheim, .icon-label .label, .headline .headline-en, .main #articles .article .article-source .article-source-url, .main #aboutme .socials {
+  font-family: 'Anaheim', sans-serif;
+  letter-spacing: .05em;
+}
+
+body .header,
+body .section {
+  padding: 40px 5%;
+}
+
+@media only screen and (min-width: 1025px) {
+  body .header,
+  body .section {
+    padding: 55px calc( (100% - 1024px)/2);
+  }
+}
+
+body .header > *,
+body .section > * {
+  position: relative;
+  z-index: 10;
+}
+
+body .header {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.header {
+  height: 60px;
+  line-height: 60px;
+}
+
+.header .sitelogo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 1025px) {
+  .main .section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main .section .l-headline {
+    width: 324px;
+  }
+  .main .section .l-section-contents {
+    width: 700px;
+  }
+}
+
+.main #aboutweb {
+  background-color: #EEEEEE;
+}
+
+.main #articles .article {
+  padding: 0 0 10px;
+  margin-bottom: 10px;
+  border-top: 1px solid #eeeeee;
+}
+
+.main #articles .article:nth-child(1) {
+  border-top-width: 0;
+}
+
+.main #articles .article .article-category {
+  font-size: 12px;
+}
+
+.main #articles .article .article-category .icon {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.main #articles .article .article-title {
+  font-weight: bold;
+}
+
+.main #articles .article .article-title:hover {
+  text-decoration: underline;
+}
+
+.main #articles .article .article-source {
+  float: right;
+  color: #757575;
+  line-height: 0.9em;
+  margin-top: 10px;
+}
+
+.main #articles .article .article-source .article-source-title {
+  font-size: 11px;
+  display: block;
+  text-align: right;
+}
+
+.main #articles .article .article-source .article-source-url {
+  font-size: 10px;
+  margin-top: 3px;
+  display: block;
+  text-align: right;
+}
+
+@media only screen and (min-width: 1025px) {
+  .main #articles .article .article-source {
+    -webkit-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
+  }
+  .main #articles .article .article-source:hover {
+    opacity: .75;
+  }
+  .main #articles .article .article-source .article-source-title {
+    font-size: 12px;
+  }
+  .main #articles .article .article-source .article-source-url {
+    font-size: 11px;
+  }
+}
+
+.main #aboutme {
+  background-color: #EEEEEE;
+}
+
+.main #aboutme .socials {
+  margin-top: 20px;
+}
+
+.main #aboutme .socials .icon {
+  font-size: 18px;
+  color: #757575;
+}
+
+.footer .copyright {
+  text-align: center;
+  line-height: 50px;
+}
